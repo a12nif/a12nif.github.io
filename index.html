@@ -24,11 +24,11 @@
   
   
   
-<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="css/style.css">
 
   
     
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+<link rel="stylesheet" href="fancybox/jquery.fancybox.min.css">
 
   
   
@@ -44,11 +44,11 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">博博博博客</a>
+        <a href="index.html" id="logo">博博博博客</a>
       </h1>
       
         <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">副标题</a>
+          <a href="index.html" id="subtitle">副标题</a>
         </h2>
       
     </div>
@@ -56,7 +56,7 @@
       <nav id="main-nav">
         <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
         
-          <a class="main-nav-link" href="/">Home</a>
+          <a class="main-nav-link" href="index.html">Home</a>
         
           <a class="main-nav-link" href="/archives">Archives</a>
         
@@ -80,7 +80,7 @@
   
     <article id="post-test-img" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2025/12/01/test-img/" class="article-date">
+    <a href="2025/12/01/test-img/" class="article-date">
   <time class="dt-published" datetime="2025-12-01T07:15:03.000Z" itemprop="datePublished">2025-12-01</time>
 </a>
     
@@ -92,7 +92,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2025/12/01/test-img/">test-img</a>
+      <a class="p-name article-title" href="2025/12/01/test-img/">test-img</a>
     </h1>
   
 
@@ -105,7 +105,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://a12nif.github.io/2025/12/01/test-img/" data-id="cuid6k7Z0svuXQ6gR-PcC33sY" data-title="test-img" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="https://a12nif.github.io/2025/12/01/test-img/" data-id="cuidq_JnDjJ1oX1RqRxolqDHj" data-title="test-img" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
@@ -119,7 +119,7 @@
   
     <article id="post-渗透作业/Wireshark" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2025/11/27/%E6%B8%97%E9%80%8F%E4%BD%9C%E4%B8%9A/Wireshark/" class="article-date">
+    <a href="2025/11/27/%E6%B8%97%E9%80%8F%E4%BD%9C%E4%B8%9A/Wireshark/" class="article-date">
   <time class="dt-published" datetime="2025-11-27T09:17:58.766Z" itemprop="datePublished">2025-11-27</time>
 </a>
     
@@ -131,7 +131,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2025/11/27/%E6%B8%97%E9%80%8F%E4%BD%9C%E4%B8%9A/Wireshark/">wireshark对于QQ流量的分析</a>
+      <a class="p-name article-title" href="2025/11/27/%E6%B8%97%E9%80%8F%E4%BD%9C%E4%B8%9A/Wireshark/">wireshark对于QQ流量的分析</a>
     </h1>
   
 
@@ -144,14 +144,14 @@
 <p>全量加密，无明文传输：</p>
 <p>基础消息（UDP&#x2F;TCP）：采用QQ自研的加密协议（基于非对称+对称加密），Wireshark抓包仅能看到加密后的二进制流，无法直接解析内容；<br>  ​<br>HTTPS流量（404&#x2F;443端口）：叠加TLS&#x2F;SSL加密，连传输的协议头都经过加密；<br>  ​<br>唯一“明文”：仅IP&#x2F;端口等网络层信息可见，无任何用户隐私（账号、消息内容）明文暴露。</p>
 <p>接下来使用wireshark获取QQ图片</p>
-<p><img src="/.deploy_git/img/wire1.png" alt="1.先让手机和电脑处于同一网络中,再用手机给电脑发一张图片"></p>
-<p><img src="/.deploy_git/img/wire2.png" alt="2.再使用wireshark抓包，然后使用命令ipsrc&#x3D;&#x3D;xxx(手机ip)进行查找"><br>这里我发的是jpg格式，所以可以使用十六进制来筛选（jpg文件开头是ffd8）</p>
-<p><img src="/.deploy_git/img/wire3.png" alt="3.对抓包后的结果，选择追踪流，再选择TCP流，可以得到ASCII的形式，将其转为原始数据，如图"><br>将其另存为img.jpg<br><img src="/.deploy_git/img/wire4.png" alt="直接打开发现没有图片"><br>这是由于文件数据的前面存在请求头，所以将其放入WinHex中，搜索jpg的文件头ffd8<br><img src="/.deploy_git/img/wire5.png" alt="将ffd8前面的数据删除，再保存"><br><img src="/.deploy_git/img/wire6.png" alt="此时再次打开图片，即可得到"></p>
+<p><img src="/images/wire1.png" alt="1.先让手机和电脑处于同一网络中,再用手机给电脑发一张图片"></p>
+<p><img src="/images/wire2.png" alt="2.再使用wireshark抓包，然后使用命令ipsrc&#x3D;&#x3D;xxx(手机ip)进行查找"><br>这里我发的是jpg格式，所以可以使用十六进制来筛选（jpg文件开头是ffd8）</p>
+<p><img src="/images/wire3.png" alt="3.对抓包后的结果，选择追踪流，再选择TCP流，可以得到ASCII的形式，将其转为原始数据，如图"><br>将其另存为img.jpg<br><img src="/images/wire4.png" alt="直接打开发现没有图片"><br>这是由于文件数据的前面存在请求头，所以将其放入WinHex中，搜索jpg的文件头ffd8<br><img src="/images/wire5.png" alt="将ffd8前面的数据删除，再保存"><br><img src="/images/wire6.png" alt="此时再次打开图片，即可得到"></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://a12nif.github.io/2025/11/27/%E6%B8%97%E9%80%8F%E4%BD%9C%E4%B8%9A/Wireshark/" data-id="cuidMQtZFbo-FYzk7Qe1KPtiC" data-title="wireshark对于QQ流量的分析" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="https://a12nif.github.io/2025/11/27/%E6%B8%97%E9%80%8F%E4%BD%9C%E4%B8%9A/Wireshark/" data-id="cuidN_0bc0qEyRGKhw4XOxFVr" data-title="wireshark对于QQ流量的分析" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
@@ -165,7 +165,7 @@
   
     <article id="post-第一个文章" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2025/11/23/%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%96%87%E7%AB%A0/" class="article-date">
+    <a href="2025/11/23/%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%96%87%E7%AB%A0/" class="article-date">
   <time class="dt-published" datetime="2025-11-23T09:07:58.000Z" itemprop="datePublished">2025-11-23</time>
 </a>
     
@@ -177,7 +177,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2025/11/23/%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%96%87%E7%AB%A0/">第一个文章</a>
+      <a class="p-name article-title" href="2025/11/23/%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%96%87%E7%AB%A0/">第一个文章</a>
     </h1>
   
 
@@ -190,7 +190,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://a12nif.github.io/2025/11/23/%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%96%87%E7%AB%A0/" data-id="cuidk4dZAFMpTqstYMMBjbxY6" data-title="第一个文章" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="https://a12nif.github.io/2025/11/23/%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%96%87%E7%AB%A0/" data-id="cuid1v61J4uqJ5EtVaJbGQMG7" data-title="第一个文章" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
@@ -220,7 +220,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/12/">十二月 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/11/">十一月 2025</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="archives/2025/12/">十二月 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2025/11/">十一月 2025</a></li></ul>
     </div>
   </div>
 
@@ -233,15 +233,15 @@
       <ul>
         
           <li>
-            <a href="/2025/12/01/test-img/">test-img</a>
+            <a href="2025/12/01/test-img/">test-img</a>
           </li>
         
           <li>
-            <a href="/2025/11/27/%E6%B8%97%E9%80%8F%E4%BD%9C%E4%B8%9A/Wireshark/">wireshark对于QQ流量的分析</a>
+            <a href="2025/11/27/%E6%B8%97%E9%80%8F%E4%BD%9C%E4%B8%9A/Wireshark/">wireshark对于QQ流量的分析</a>
           </li>
         
           <li>
-            <a href="/2025/11/23/%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%96%87%E7%AB%A0/">第一个文章</a>
+            <a href="2025/11/23/%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%96%87%E7%AB%A0/">第一个文章</a>
           </li>
         
       </ul>
@@ -266,7 +266,7 @@
     </div>
     <nav id="mobile-nav">
   
-    <a href="/" class="mobile-nav-link">Home</a>
+    <a href="index.html" class="mobile-nav-link">Home</a>
   
     <a href="/archives" class="mobile-nav-link">Archives</a>
   
@@ -274,17 +274,17 @@
     
 
 
-<script src="/js/jquery-3.6.4.min.js"></script>
+<script src="js/jquery-3.6.4.min.js"></script>
 
 
 
   
-<script src="/fancybox/jquery.fancybox.min.js"></script>
+<script src="fancybox/jquery.fancybox.min.js"></script>
 
 
 
 
-<script src="/js/script.js"></script>
+<script src="js/script.js"></script>
 
 
 
